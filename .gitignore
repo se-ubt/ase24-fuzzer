@@ -45,3 +45,8 @@ target/
 *.log
 *.log.*
 *.lck
+program_coverage
+program_unsafe
+*.gcov
+*.gcda
+*.gcno
