@@ -7,8 +7,10 @@ import java.util.stream.IntStream;
 
 public class Fuzzer {
     public static void main(String[] args) {
-        String commandToFuzz = "./program_unsafe";
-        //String commandToFuzz = "./program_coverage";
+        if (args.length != 1) {
+            System.err.println("Usage: java Fuzzer.java \"<command_to_fuzz>\"");
+        }
+        String commandToFuzz = args[0];
         String workingDirectory = "./";
 
         if (!Files.exists(Paths.get(workingDirectory, commandToFuzz))) {

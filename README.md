@@ -12,7 +12,7 @@ gcc program_unsafe.c -o program_unsafe -Wno-deprecated-declarations
 ## Run fuzzer
 
 ```shell
-java Fuzzer.java
+java Fuzzer.java "./program_unsafe"
 ```
 
 ## Compile coverage program
@@ -23,10 +23,10 @@ gcc program_coverage.c -o program_coverage --coverage
 
 This yields a file `program_coverage.gcno`.
 
-## Run/fuzz program
+## Run fuzzer
 
 ```shell
-java Fuzzer.java
+java Fuzzer.java "./program_coverage"
 ```
 
 This yields a file `program_coverage.gcda`
