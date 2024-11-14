@@ -33,8 +33,16 @@ This yields a file `program_coverage.gcda`
 
 ## Use gcov to create coverage report
 
+Line coverage:
+
 ```shell
 gcov program_coverage.c
 ```
 
-The coverage report is then available in file `program_coverage.c.gcov`.
+Branch coverage:
+
+```shell
+gcov -b program_coverage.c
+```
+
+In both cases, the coverage report is then available in file `program_coverage.c.gcov`.
